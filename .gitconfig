@@ -1,0 +1,10 @@
+[user]
+  name = Isucon
+  email = isucon@example.com
+[push]
+	default = current
+[color]
+  ui = auto
+[alias]
+  co = checkout
+  st = status
