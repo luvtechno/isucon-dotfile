@@ -2,7 +2,7 @@
   name = Isucon
   email = isucon@example.com
 [push]
-	default = current
+  default = current
 [color]
   ui = auto
 [alias]
