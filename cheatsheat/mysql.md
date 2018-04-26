@@ -250,12 +250,15 @@ innodb_flush_method=O_DIRECT
 
 
 ### ログフラッシュのタイミング
+
 disk へのフラッシュをトランザクションごとではなく、１秒に１回にする。
 
 ```
 [mysqld]
 innodb_flush_log_at_trx_commit=2  // デフォルトは 1
 ```
+
+https://qiita.com/kkyouhei/items/d2c40d9e3952c7049ca3
 
 
 ## slow query log 解析
