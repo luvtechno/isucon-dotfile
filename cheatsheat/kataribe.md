@@ -14,6 +14,8 @@ Go の設定をする必要がある。設定できていれば、`go get <repos
 
 ## Nginx
 
+https://github.com/matsuu/kataribe#nginx
+
 scp でローカルに持ってきて、cat で食わせて ruby で整形する。
 nginx のログフォーマットは変えておく必要あり。
 
@@ -28,14 +30,14 @@ docker cp d67c8aab815b:/app/app.log app.log # Docker から持ってくる場合
 # ローカル
 cd ~/Downloads/kataribe
 scp isucon@13.71.158.7:/var/log/nginx/access_kataribe.log .
-cat ./access_kataribe.log | ./kataribe -f ./kataribe_nginx.toml | ./kataribe_to_md.rb | pbcopy
+cat ./access_kataribe.log | ./kataribe -f ./kataribe_nginx.toml | ./kataribe2md.rb | pbcopy
 ```
 
 
 <details>
 <summary>設定ファイル</summary>
 
-```
+```rb
 # Top Ranking Group By Request
 ranking_count = 20
 
@@ -114,6 +116,8 @@ name = "GET /rooms/:id"
 
 ## Rack
 
+https://github.com/matsuu/kataribe#rack
+
 ```rb
 # config.ru
 logger = Logger.new("./app_#{Time.now.strftime('%H%m')}.log")
@@ -126,7 +130,7 @@ use Rack::CommonLogger, logger
 ```
 # ローカル
 scp isucon@13.71.158.7:/home/isucon/webapp/app.log .
-cat ./app.log | ./kataribe -f ./kataribe_rack.toml | ./kataribe_to_md.rb | pbcopy
+cat ./app.log | ./kataribe -f ./kataribe_rack.toml | ./kataribe2md.rb | pbcopy
 ```
 
 
@@ -196,8 +200,6 @@ name = "GET /api/stream/rooms/:id"
 
 </details>
 
-ref. https://github.com/matsuu/kataribe#rack
-
 #### kataribe to md
 
 ```rb
@@ -213,6 +215,5 @@ val = txt.split("\n\n").map { |txt|
 }.join
 
 puts val
-
 ```
 
