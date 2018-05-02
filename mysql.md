@@ -248,6 +248,11 @@ OSのファイルシステムとのダブルキャッシュを避けるため、
 innodb_flush_method=O_DIRECT
 ```
 
+設定の反映を確認する
+
+```sql
+mysql> show variables like  "innodb_%_size";
+```
 
 ### ログフラッシュのタイミング
 
@@ -374,5 +379,4 @@ mysql> show variables like '%time_zone%';
 +------------------+-------+
 2 rows in set (0.01 sec)
 ```
-
 

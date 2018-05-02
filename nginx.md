@@ -14,7 +14,7 @@
 mkdir -p ~/webapp/conf
 cp /etc/nginx/nginx.conf ~/webapp/conf
 sudo rm /etc/nginx/nginx.conf
-sudo ln -s /home/isucon/webapp/conf/nginx.conf /etc/nginx/nginx.conf
+sudo ln -s /home/isucon/webapp/nginx.conf /etc/nginx/nginx.conf
 ```
 
 

@@ -25,6 +25,15 @@ git init
 git remote add origin https://xxx@github.com/luvtechno/isucon7-qualifier  # `xxx` を token で置き換える
 # vi .gitignore
 # git add -f .gitignore
-git commit -am "Init"
+git add .
+git commit -am "Initialize"
 git push -f -u origin master
+```
+
+2台め以降は`push -f`しないでmasterをpullする。もっといいやり方があれば知りたい。
+
+```
+git co tmp
+git branch -d master
+git pull
 ```
