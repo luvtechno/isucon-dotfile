@@ -3,7 +3,7 @@
 ## ssh
 
 ```
-curl https://github.com/{luvtechno,qnighy,Altech}.keys >> /home/isucon/.ssh/authorized_keys
+curl https://github.com/{luvtechno,qnighy,Altech}.keys >> ~/.ssh/authorized_keys
 ```
 
 ## git
@@ -12,7 +12,7 @@ curl https://github.com/{luvtechno,qnighy,Altech}.keys >> /home/isucon/.ssh/auth
 
 ```
 cd ~
-wget https://raw.githubusercontent.com/luvtechno/isucon-dotfile/master/.gitconfig
+curl https://raw.githubusercontent.com/luvtechno/isucon-dotfile/master/.gitconfig > ~/.gitconfig
 ```
 
 ## github
