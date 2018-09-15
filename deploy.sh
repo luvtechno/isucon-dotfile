@@ -8,9 +8,14 @@ sudo systemctl restart mysql.service
 # docker-compose build
 # sudo systemctl start isu.service
 
-cd ruby
-bundle install --jobs 4
+# cd ruby
+# bundle install --jobs 4
+# cd ..
+
+cd rust
+cargo build --release
 cd ..
+
 sudo systemctl restart isuda.ruby.service
 sudo systemctl restart isutar.ruby.service
 # sudo systemctl restart isutar.ruby.service
