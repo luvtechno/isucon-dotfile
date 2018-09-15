@@ -3,7 +3,7 @@
 ## ssh
 
 ```
-curl https://github.com/{luvtechno,3846masa}.keys >> /home/isucon/.ssh/authorized_keys
+curl https://github.com/{luvtechno,qnighy,Altech}.keys >> /home/isucon/.ssh/authorized_keys
 ```
 
 ## git
