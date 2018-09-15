@@ -8,6 +8,12 @@
 $ sudo apt-get install -y mysql-server
 ```
 
+### CentOS
+
+```shell-session
+$ sudo yum -y install mysql
+```
+
 ### Mac
 
 ```shell-session
